@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ingredients"></ul>
+    <script>
+        const ingredients = [
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
+];
+ const elements = ingredients.map((elem) => document.createElement('li'))
+ const ulLink = document.getElementById('ingredients');
+ ulLink.append(...elements)
+ const li = document.getElementsByTagName('li');
+ console.log(li)
+//  console.log(elements)
+    </script>
+</body>
+</html>

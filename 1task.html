@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="categories">
+        <li class="item">
+          <h2>Животные</h2>
+      
+          <ul>
+            <li>Кот</li>
+            <li>Хомяк</li>
+            <li>Лошадь</li>
+            <li>Попугай</li>
+          </ul>
+        </li>
+        <li class="item">
+          <h2>Продукты</h2>
+      
+          <ul>
+            <li>Хлеб</li>
+            <li>Петрушка</li>
+            <li>Творог</li>
+          </ul>
+        </li>
+        <li class="item">
+          <h2>Технологии</h2>
+      
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node</li>
+          </ul>
+        </li>
+      </ul>
+    <script>
+      const category = document.getElementById('categories')
+      // console.log(category)
+      const chlidrens = category.children;
+     for(let i = 0 ;i < chlidrens.length; i++){
+      //  console.log(chlidrens[i])
+      //  let first = chlidrens[i].firstChild.textContent;
+      //  let last = chlidrens[i].lastChild;
+      //  console.log(last)
+      //  console.log(first)
+       console.log(`Категория: ${chlidrens[i].textContent}`)
+      //  console.log(`Количество элементов:${chlidrens[i].lastChild.length} `)
+     }
+    </script>
+</body>
+</html>
