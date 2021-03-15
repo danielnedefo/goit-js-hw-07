@@ -17,11 +17,13 @@
   'Зелень',
   'Приправы',
 ];
- const elements = ingredients.map((elem) => document.createElement('li'))
+ const elements = ingredients.map((elem) => {
+  const liCreate = document.createElement('li')
+  liCreate.textContent = elem
+  return liCreate
+})
  const ulLink = document.getElementById('ingredients');
  ulLink.append(...elements)
- const li = document.getElementsByTagName('li');
- console.log(li)
 //  console.log(elements)
     </script>
 </body>
