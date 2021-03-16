@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="controls">
+  <input type="number" min="" max="100" step="1" />
+  <button type="button" data-action="render">Создать</button>
+  <button type="button" data-action="destroy">Очистить</button>
+</div>
+
+<div id="boxes"></div>
+<script>
+  const inputDiv = document.getElementById('boxes')
+  const nmbrOfBox = document.querySelector('input')
+  console.dir()
+  const removeItem = document.querySelector('[data-action="destroy"]')
+  const addItem = document.querySelector('[data-action="render"]')
+ 
+  const createBoxes = function(amount){
+    amount = +nmbrOfBox.value;
+    const arrForDiv = []
+    for(let i = 0;i <= amount; i++){
+     const createDiv = document.createElement('div');
+        createDiv.style.width = `${20 + (i + 1)*10}px`;
+        createDiv.style.height = `${20 + (i + 1)*10}px`;
+        createDiv.style.backgroundColor = `rgb(${getRandom(0,255)},${getRandom(0,255)},${getRandom(0,255)})`;
+        arrForDiv.push(createDiv)
+    }
+    inputDiv.append(...arrForDiv)
+  }
+  const destroyBoxes = function(){
+    inputDiv.innerHTML = '';
+    nmbrOfBox.value = 0;
+  }
+  function getRandom(min,max){
+  return Math.ceil(Math.random() * (max - min) - min)
+  }
+   addItem.addEventListener('click',createBoxes)
+  removeItem.addEventListener('click',destroyBoxes)
+</script>
+</body>
+</html>

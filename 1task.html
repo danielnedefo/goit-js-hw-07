@@ -41,11 +41,11 @@
       </ul>
     <script>
       const category = document.getElementById('categories')
-      // console.log(category)
       const chlidrens = category.children;
      for(let i = 0 ;i < chlidrens.length; i++){
+       const liLength = chlidrens[i].querySelectorAll('li').length;
        console.log(`Категория: ${chlidrens[i].firstElementChild.textContent}`)
-      //  console.log(`Количество элементов:${chlidrens[i].lastElementChild}`)
+       console.log(`Количество элементов:${liLength}`)
      }
     </script>
 </body>

@@ -26,6 +26,16 @@
     alt: 'Group of Horses Running',
   },
 ];
+   const mainUl = document.querySelector('#gallery')
+   const img = images.map((image) => {
+     const liList = document.createElement('li')
+     const imgList = document.createElement('img')
+     imgList.src = image.url
+     imgList.alt = image.alt
+     liList.append(imgList)
+     mainUl.append(liList)
+    })
+    mainUl.style.display = 'flex';
     </script>
 </body>
 </html>

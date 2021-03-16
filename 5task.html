@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="Ваше имя?" id="name-input" />
+<h1>Привет, <span id="name-output">незнакомец</span>!</h1>
+<script>
+  const inputData = document.querySelector('#name-input')
+  const changingName = document.querySelector('#name-output')
+  const defaultName = changingName.textContent;
+  console.log(defaultName)
+  inputData.addEventListener('input',function(event){
+    if(event.currentTarget.value === ''){
+      changingName.textContent = defaultName;
+    }else{
+      changingName.textContent = event.currentTarget.value;
+    }
+  })
+  // console.log(inputData)
+</script>
+</body>
+</html>
