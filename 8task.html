@@ -22,7 +22,7 @@
   const addItem = document.querySelector('[data-action="render"]')
  
   const createBoxes = function(amount){
-    amount = +nmbrOfBox.value;
+    amount = +nmbrOfBox.value - 1;
     const arrForDiv = []
     for(let i = 0;i <= amount; i++){
      const createDiv = document.createElement('div');
